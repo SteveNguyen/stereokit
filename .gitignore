@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+
+# Capture and validation output. captures*/ holds detected board corners
+# (~2 KB a pair) and samples_*/ holds full rectified image pairs (tens of
+# MB a sweep). Neither is committed: both are re-derivable by re-running
+# the capture, and a colleague calibrating their own unit makes their own.
+captures*/
+samples*/
+
+# Diagnostic leftovers from a failed or superseded solve.
+*.rejected.json
+*.bak.json
+
+# Recorded RGBD frames from 'stereokit record', and ad-hoc image saves.
+rgbd/
+left_*.png
+right_*.png
+
+# SDD scratch workspace (ledger, briefs, review packages)
+.superpowers/
